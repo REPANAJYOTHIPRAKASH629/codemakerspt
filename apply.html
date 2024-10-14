@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Internship Application Form</title>
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div id="form-container" class="bg-white shadow-lg rounded-lg p-6 sm:p-8 w-full max-w-md backdrop-filter backdrop-blur-lg bg-opacity-80">
+        <h2 class="text-xl sm:text-2xl font-bold mb-6 text-center text-gray-800">Internship Application</h2>
+        <form id="application-form">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Name</label>
+                <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+            </div>
+
+            <div class="mb-4">
+                <label for="rollnumber" class="block text-gray-700 text-sm font-semibold mb-2">Roll Number</label>
+                <input type="text" id="rollnumber" name="rollnumber" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Roll Number">
+            </div>
+
+            <div class="mb-4">
+                <label for="collegename" class="block text-gray-700 text-sm font-semibold mb-2">College Name</label>
+                <input type="text" id="collegename" name="collegename" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your College Name">
+            </div>
+
+            <div class="mb-4">
+                <label for="phonenumber" class="block text-gray-700 text-sm font-semibold mb-2">Phone Number</label>
+                <input type="tel" id="phonenumber" name="phonenumber" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Phone Number">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+            </div>
+
+            <div class="mb-4">
+                <label for="domain" class="block text-gray-700 text-sm font-semibold mb-2">Internship Domain</label>
+                <select id="domain" name="domain" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="">Select Domain</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Frontend Development">Frontend Development</option>
+                    <option value="Backend Development">Backend Development</option>
+                    <option value="Data Analysis">Data Analysis</option>
+                    <option value="Excel">Excel</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                    <option value="SQL">SQL</option>
+                    <option value="PowerBI">PowerBI</option>
+                    <option value="Tableau">Tableau</option>
+                    <option value="VLSI Design">VLSI Design</option>
+                    <option value="R Programming">R Programming</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="duration" class="block text-gray-700 text-sm font-semibold mb-2">Internship Duration</label>
+                <select id="duration" name="duration" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="">Select Duration</option>
+                    <option value="4 weeks">4 weeks</option>
+                    <option value="6 weeks">6 weeks</option>
+                    <option value="8 weeks">8 weeks</option>
+                    <option value="10 weeks">10 weeks</option>
+                </select>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Apply
+                </button>
+            </div>
+        </form>
+
+        <div id="acknowledgment" class="hidden mt-6 text-center">
+            <p class="text-lg text-gray-700">Thank you for your application! We will get back to you soon.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('application-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById('form-container').classList.add('hidden'); // Hide the form
+            alert("Thank you for your application! We will get back to you soon."); // Show acknowledgment
+            window.location.href = "index.html"; // Redirect to index.html
+        });
+    </script>
+</body>
+</html>
