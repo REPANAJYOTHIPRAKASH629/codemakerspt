@@ -5,59 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificate of Internship</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Watermark style */
+    .watermark-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+      width: 80%; /* Adjust the size for better visibility */
+    }
+
+    /* Custom Border Styles */
+    .custom-border {
+      position: relative;
+      padding: 20px;
+      border: 5px solid #4a5568; /* Outer border color */
+      border-radius: 15px; /* Rounded corners */
+      background: #fff;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-border::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 5px solid transparent; /* Transparent for gradient */
+      border-radius: 15px; /* Inner border roundness */
+      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient */
+      z-index: -3; /* Adjust the z-index for the layering */
+    }
+
+    .custom-border::after {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border: 1px solid #9CA3AF; /* Third border for layered effect */
+      border-radius: 15px;
+      z-index: -1;
+    }
+
+    /* Accreditation logos for responsiveness */
+    @media (max-width: 640px) {
+      .accreditation-logo {
+        height: 5rem; /* Smaller size for mobile */
+      }
+      .h-24 {
+        height: 6rem; /* Smaller company logo for mobile */
+      }
+    }
+
+    @media (min-width: 641px) {
+      .accreditation-logo {
+        height: 4rem; /* Standard size for larger screens */
+      }
+      .h-24 {
+        height: 8rem; /* Standard company logo for larger screens */
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-100">
-  <div class="max-w-4xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg border-4 border-blue-800">
+<body class="bg-gray-100 relative">
+  <div class="max-w-4xl mx-auto my-10 p-8 custom-border relative overflow-hidden"> <!-- Add overflow-hidden -->
     
-    <div class="text-center">
-      <h2 class="text-3xl font-bold uppercase">Certificate of Internship</h2>
-      <p class="text-2xl text-gray-700">Code Makers</p>
-    </div>
+    <!-- Watermark background image -->
+    <img src="/img/logo_seal.png" alt="Watermark Logo" class="watermark-bg">
+
     <!-- Header with logos -->
-    <div class="flex justify-between items-center border-b-2 pb-4 mb-6">
-      
+    <div class="flex flex-col md:flex-row justify-between items-center pb-4 mb-6">
       <!-- Company logo -->
-      <img src="/img/logo.jpg" alt="Company Logo" class="h-16">
-      
-      <!-- Certificate title -->
-      
-      
+      <img src="/img/logo_seal.png" alt="Company Logo" class="h-24 md:h-32">
+
       <!-- Accreditation logos -->
-      <div class="flex space-x-4">
-        <img src="/img/aicte.jpg" alt="AICTE Accreditation Logo" class="h-16">
-        <img src="/img/msme.png" alt="MSME Accreditation Logo" class="h-16">
-        <img src="/img/iso.jpeg" alt="ISO Accreditation Logo" class="h-16">
+      <div class="flex space-x-2 md:space-x-4">
+        <img src="/img/aicte.jpg" alt="AICTE Accreditation Logo" class="accreditation-logo">
+        <img src="/img/msme.png" alt="MSME Accreditation Logo" class="accreditation-logo">
+        <img src="/img/iso.jpeg" alt="ISO Accreditation Logo" class="accreditation-logo">
       </div>
     </div>
 
-    <!-- Body of the certificate -->
+    <!-- Certificate Header -->
     <div class="text-center mb-8">
-      <p class="text-lg">This Internship Program Certificate is proudly awarded to</p>
-      <h1 class="text-4xl font-bold text-blue-900 mt-4">REPANA JYOTHI PRAKASH</h1>
-      <p class="text-lg mt-6">For outstanding completion of the <strong>Full Stack Development</strong> internship program at</p>
-      <p class="text-lg font-semibold">CODEMAKERS</p>
-      <p class="text-lg mt-4">From 10th May to 20th June 2024, Roll No: 22695A3203</p>
-      <p class="text-lg">College: Madanapalle Institute of Technology and Science</p>
+      <h2 class="text-3xl font-bold uppercase">Certificate of Internship</h2>
+      <p class="text-xl text-gray-700">Presented by Code Makers</p>
     </div>
 
-    <!-- Footer section -->
-    <div class="flex justify-between items-center">
+    <!-- Certificate Body -->
+    <div class="text-center mb-8">
+      <p class="text-lg text-justify">
+        This is to certify that <strong class="text-4xl font-bold text-blue-900">REPANA JYOTHI PRAKASH</strong> has successfully completed the <strong>Full Stack Development Internship Program</strong> at <span class="font-semibold">CODEMAKERS</span> from 10th May to 20th June 2024, with Roll No: 22695A3203, from <span class="font-semibold">Madanapalle Institute of Technology and Science</span>.
+      </p>
+      <p class="text-lg text-justify">
+        In recognition of your exceptional performance and dedication, we commend your hard work and contributions to our projects.
+      </p>
+    </div>
+
+    <!-- Appreciation Section -->
+    <div class="text-center mb-8">
+    </div>
+
+    <!-- Footer Section -->
+    <div class="flex flex-col md:flex-row justify-between items-center">
       <!-- Signature -->
       <div class="text-center">
+        <img src="/img/signature.png" alt="Company Seal" class="h-16 mx-auto">
         <p class="font-bold">R Jyothi Prakash</p>
         <p>CEO & FOUNDER</p>
       </div>
 
       <!-- Seal -->
       <div class="text-center">
-        <img src="/img/logo_seal.png" alt="Company Seal" class="h-16 mx-auto">
-        <p class="text-sm">CODEMAKERS SEAL</p>
+        <img src="/img/logo_seal.png" alt="Company Seal" class="h-24 mx-auto">
       </div>
 
       <!-- QR Code -->
       <div class="text-center">
-        <img src="img/CM_2024_203.png" alt="QR Code" class="h-16 mx-auto">
-        <p class="text-sm">Verification at</p>
+        <img src="/img/CM_2024_203.png" alt="QR Code" class="h-24 mx-auto">
       </div>
     </div>
   </div>
