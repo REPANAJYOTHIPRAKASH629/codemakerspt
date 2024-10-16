@@ -33,7 +33,7 @@
       left: -10px;
       right: -10px;
       bottom: -10px;
-      border: 5px solid transparent; /* Transparent for gradient */
+      border: 10px solid transparent; /* Transparent for gradient */
       border-radius: 15px; /* Inner border roundness */
       background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); /* Rainbow gradient */
       z-index: -3; /* Adjust the z-index for the layering */
@@ -46,7 +46,7 @@
       left: 5px;
       right: 5px;
       bottom: 5px;
-      border: 1px solid #9CA3AF; /* Third border for layered effect */
+      border: 5px solid #9CA3AF; /* Third border for layered effect */
       border-radius: 15px;
       z-index: -1;
     }
@@ -72,7 +72,7 @@
   </style>
 </head>
 <body class="bg-gray-100 relative">
-  <div class="max-w-4xl mx-auto my-10 p-8 custom-border relative overflow-hidden"> <!-- Add overflow-hidden -->
+  <div class="max-w-4xl mx-auto my-10 p-8 custom-border relative overflow-hidden">
     
     <!-- Watermark background image -->
     <img src="/img/logo_seal.png" alt="Watermark Logo" class="watermark-bg">
@@ -80,28 +80,26 @@
     <!-- Header with logos -->
     <div class="flex flex-col md:flex-row justify-between items-center pb-4 mb-6">
       <!-- Company logo -->
-      <img src="/img/logo_seal.png" alt="Company Logo" class="h-24 md:h-32">
+      <img src="/img/logo_seal.png" alt="Company Logo" class="h-32 md:h-32">
 
       <!-- Accreditation logos -->
       <div class="flex space-x-2 md:space-x-4">
-        <img src="/img/aicte.jpg" alt="AICTE Accreditation Logo" class="accreditation-logo">
-        <img src="/img/msme.png" alt="MSME Accreditation Logo" class="accreditation-logo">
-        <img src="/img/iso.jpeg" alt="ISO Accreditation Logo" class="accreditation-logo">
+        <img src="/img/aicte.jpg" alt="AICTE Accreditation Logo" class="accreditation-logo h-24">
+        <img src="/img/msme.png" alt="MSME Accreditation Logo" class="accreditation-logo h-24">
+        <img src="/img/iso.png" alt="ISO Accreditation Logo" class="accreditation-logo h-24">
       </div>
     </div>
 
     <!-- Certificate Header -->
     <div class="text-center mb-8">
       <h2 class="text-3xl font-bold uppercase">Certificate of Internship</h2>
-      <p class="text-xl text-gray-700">Presented by Code Makers</p>
+      <p class="text-xl text-gray-700">Presented by CodeMakers</p>
     </div>
 
     <!-- Certificate Body -->
     <div class="text-center mb-8">
       <p class="text-lg text-justify">
-        This is to certify that <strong class="text-4xl font-bold text-blue-900">REPANA JYOTHI PRAKASH</strong> has successfully completed the <strong>Full Stack Development Internship Program</strong> at <span class="font-semibold">CODEMAKERS</span> from 10th May to 20th June 2024, with Roll No: 22695A3203, from <span class="font-semibold">Madanapalle Institute of Technology and Science</span>.
-      </p>
-      <p class="text-lg text-justify">
+        This is to certify that <strong class="text-4xl font-bold text-blue-900">REPANA JYOTHI PRAKASH</strong>, intern ID <i class="text-2xl font-semibold text-gray-900">CM20243203</i> has successfully completed the <strong>Full Stack Development Internship Program</strong> at <span class="font-semibold">CODEMAKERS</span> from 10th May to 20th June 2024, with Roll No: 22695A3203, from <span class="font-semibold">Madanapalle Institute of Technology and Science</span>.
         In recognition of your exceptional performance and dedication, we commend your hard work and contributions to our projects.
       </p>
     </div>
@@ -121,12 +119,12 @@
 
       <!-- Seal -->
       <div class="text-center">
-        <img src="/img/logo_seal.png" alt="Company Seal" class="h-24 mx-auto">
+        <img src="/img/logo_seal.png" alt="Company Seal" class="h-32 mx-auto">
       </div>
 
       <!-- QR Code -->
       <div class="text-center">
-        <img src="/img/CM_2024_203.png" alt="QR Code" class="h-24 mx-auto">
+        <img src="/img/CM_2024_203.png" alt="QR Code" class="h-32 mx-auto">
       </div>
     </div>
   </div>
